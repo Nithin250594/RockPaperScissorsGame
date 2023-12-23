@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
+import {Popup} from 'reactjs-popup'
+
 import {RiCloseLine} from 'react-icons/ri'
 
 export const RockPaperScissorsBg = styled.div`
   background-color: #223a5f;
   opacity: ${props => (props.popup ? 0.2 : 1)};
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
@@ -24,7 +26,7 @@ export const RockPaperScissorsUl = styled.ul`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 60px;
   padding-left: 500px;
   padding-right: 500px;
   @media screen and (max-width: 576px) {
@@ -51,8 +53,14 @@ export const RulesButton = styled.button`
   align-self: flex-end;
   border-radius: 5px;
   margin-right:8px;
+  margin-top:15px;
   cursor:pointer;
   outline:none;
+`
+export const PopupOverLay = styled(Popup)`
+  &-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 `
 
 export const PopupContainer = styled.div`
@@ -91,7 +99,7 @@ export const GameResultView = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 50px;
 `
 
 export const GameChoiceView = styled.div`

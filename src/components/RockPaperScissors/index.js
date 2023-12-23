@@ -1,7 +1,5 @@
 import {Component} from 'react'
 
-import {Popup} from 'reactjs-popup'
-
 import ScoreHeader from '../ScoreHeader'
 
 import PlayingView from '../PlayingView'
@@ -20,6 +18,7 @@ import {
   ChoiceTitle,
   GameResult,
   PlayAgainButton,
+  PopupOverLay,
 } from './styledComponents'
 
 const gameResultCases = {
@@ -181,7 +180,7 @@ class RockPaperScissors extends Component {
           </RockPaperScissorsUl>
         )}
 
-        <Popup
+        <PopupOverLay
           modal
           trigger={<RulesButton onClick={this.rulesClick}>Rules</RulesButton>}
           closeOnDocumentClick
@@ -195,7 +194,7 @@ class RockPaperScissors extends Component {
               />
             </PopupContainer>
           )}
-        </Popup>
+        </PopupOverLay>
       </RockPaperScissorsBg>
     )
   }
