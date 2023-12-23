@@ -10,10 +10,14 @@ export const EachButton = styled.button`
 `
 
 export const ImageChoice = styled.img`
-  width: 180px;
-  height: 180px;
-  @media screen and (max-width: 576px) {
-    max-width: 150px;
-    max-height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  @media screen and (min-width: 768px) {
+    width: 180px;
+    height: 180px;
+  }
+  @media screen and (min-width: 992px) {
+    width: 180px;
+    height: 180px;
   }
 `

@@ -27,17 +27,35 @@ export const RockPaperScissorsUl = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   margin-top: 60px;
-  padding-left: 500px;
-  padding-right: 500px;
-  @media screen and (max-width: 576px) {
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  @media screen and (orientation: landscape) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @media screen and (min-width: 992px) {
+    padding-left: 500px;
+    padding-right: 500px;
   }
 `
 
 export const ImageChoice = styled.img`
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
+  @media screen and (min-width: 768px) {
+    width: 160px;
+    height: 160px;
+  }
+  @media screen and (min-width: 992px) {
+    width: 180px;
+    height: 180px;
+  }
 `
 export const RulesButton = styled.button`
   background-color: #ffffff;
@@ -53,7 +71,10 @@ export const RulesButton = styled.button`
   align-self: flex-end;
   border-radius: 5px;
   margin-right:8px;
-  margin-top:15px;
+  margin-bottom:50px;
+  position:absolute;
+  bottom:0;
+  left:30;
   cursor:pointer;
   outline:none;
 `
@@ -99,7 +120,13 @@ export const GameResultView = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 992px) {
+    margin-top: 50px;
+  }
 `
 
 export const GameChoiceView = styled.div`
@@ -126,7 +153,7 @@ export const GameResult = styled.p`
   font-family: 'Roboto';
 `
 
-export const PlayAgainButton = styled(RulesButton)`
+export const PlayAgainButton = styled.button`
   font-size: 14px;
   padding-left: 28px;
   padding-right: 28px;
@@ -134,4 +161,13 @@ export const PlayAgainButton = styled(RulesButton)`
   padding-bottom: 12px;
   border-radius: 10px;
   align-self: center;
+  background-color: #ffffff;
+  color: #223a5f;
+  font-weight: 600;
+  font-family:"Bree Serif"
+  border-width: 0px;  
+  margin-right:8px;
+  margin-bottom:50px;
+  cursor:pointer;
+  outline:none;
 `
